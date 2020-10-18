@@ -1,0 +1,47 @@
+//less：中文含义比较少的，实际上它是动态的css
+//less可以使用变量，混合，嵌套，运算等等
+//less文件的扩展名是.less，传统的浏览器无法识别，需要编译
+//编译的方法如下：
+//1.使用less.min.js 自动编译
+//要求：自己编写的less文件出现在less.min.js前面
+//变量的定义。less中变量的定义以@开头
+//2.使用Hbuilder编译less文件
+//3.在node.js下使用npm全局安装less  npm  i less -g，然后使用lessc命令进行编译
+//4.考拉koala：国产软件，全球使用m'm'm'm'm'm'm'm'm'm'm'm'm'm'm'm'm'm'm
+@yellowgreen-color:yellowgreen;
+@width-200:200px; 
+.box {
+    background-color: @yellowgreen-color;
+    width: @width-200;
+    height: 200px;
+}
+.shadow{
+    text-shadow: 5px 5px 5px rgba(255,0,0,0.3);
+}
+p{
+    color: @yellowgreen-color;
+}
+.header{
+    width: 960px;
+    height: 400px;
+    background-color: @yellowgreen-color;
+    .logo{
+        width: @width-200*2;
+        height: @width-200;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    ul{
+        list-style: none;
+       li{
+           width: @width-200*0.4;
+           height:@width-200*0.15;
+           line-height: @width-200*0.15;
+           float:left;
+           a{
+               display: block;
+           }
+       }
+    }
+    
+}

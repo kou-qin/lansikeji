@@ -1,0 +1,35 @@
+/*重置css*/
+body,ul,li{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style-type: none;
+}
+#img_box{
+	display: flex;
+	flex-wrap: wrap;
+}
+#img_box li{
+	width: 50%;
+	transform-origin: left top;
+	transition: transform 0.5s;
+	/*border: 1px solid orange;*/
+}
+#img_box li:nth-child(even){
+	transform-origin: right top;
+}
+#img_box li img{
+	width: 100%;
+}
+/*制作围绕y轴旋转的效果*/
+.rotatY{
+	transform: rotateY(360deg);
+	transition: transform 2s;
+	/*过渡*/
+}
+/*放大两倍*/
+.scale{
+	transform: scale(2);
+	z-index: 99;
+}

@@ -1,0 +1,58 @@
+/*设置导航条的最小高度*/
+header .navbar{
+	min-height: 70px;
+	padding: 20px 0;
+	background-color: #ffffff;
+}
+/*设置导航条中的active样式，覆盖系统自带的默认样式*/
+.navbar .nav .active a{
+	border: 1px solid #e48907;
+	background: none !important;
+}
+/*解决导航条在移动端变窄的问题*/
+ul.navbar-nav{
+	/*border: 1px solid #f00;*/
+}
+@media only screen and (max-width: 768px){
+	ul.navbar-nav{
+		width: 100%;
+	}
+}
+/*头部导航右侧浮动*/
+header ul.collapse .navbar-nav{
+	float:right;
+	/*border: 1px solid orange;*/
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.nav>li>a{
+		padding: 10px;
+	}
+	ul.navbar-nav{
+		width: 73%;
+		
+	}
+}
+/*轮播部分的css*/
+.flex-caption{
+	color:white;
+	position: absolute;
+	left: 450px;
+	top:160px;
+}
+.flex-caption h3{
+	font-size: 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	opacity: 0.7;
+	text-shadow: 5px 5px 10px rgba(255,0,0,0.3);
+}
+.flex-caption p{
+	font-size: 20px;
+}
+/*手机和平板上不实现轮播的标题*/
+@media only screen and (max-width: 768px) {
+	.flexslider .flex-caption{
+		display: none;
+	}
+	
+}
